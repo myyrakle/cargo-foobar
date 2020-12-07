@@ -1,0 +1,28 @@
+[package]
+name = "cargo-foobar" #크레이트 이름
+version = "1.0.0" #고유한 버전. (게시할 때마다 올려야 함)
+authors = ["myyrakle <sssang97@naver.com>"] #작성자
+description = "foobar" #그냥 설명문
+keywords = ["test"] #검색용 키워드
+edition = "2018" 
+license = "MIT" #라이센스
+include = ["src/*.rs", "Cargo.toml"] #업로드 대상
+exclude = [] #업로드 제외
+readme = "README.md" #crate 페이지의 소개문 파일
+repository = "https://github.com/myyrakle/cargo-foobar" #레포지토리
+documentation = "https://github.com/myyrakle/cargo-foobar/blob/master/README.md" #문서 사이트
+homepage = "https://github.com/myyrakle/cargo-foobar/blob/master/README.md" #홈페이지 사이트
+
+[[bin]]
+name = "cargo-foo"
+path = "src/foo.rs"
+required-features = ["foo"]
+
+[[bin]]
+name = "cargo-bar"
+path = "src/bar.rs"
+required-features = ["bar"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
